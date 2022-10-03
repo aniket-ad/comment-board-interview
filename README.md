@@ -1,10 +1,7 @@
 # Comment board problem
 
 <p align="center">
-A comment board based on  <a href="https://facebook.github.io/react/">React</a>, <a href="https://github.com/expressjs/express">Express</a>, <a href="http://webpack.github.io/docs/">Webpack</a> and <a href="https://github.com/gaearon/react-transform-hmr">React Transform HMR</a>.
-</p>
-
-<br>
+A comment board based on </p>
 
 <div align="center">
 
@@ -47,7 +44,22 @@ $ yarn dev
 ## What's used
 
 ### Production Dependencies
+- react (CRA)
+- node
+- express with cors support
+- bootstrap
+- react-bootstrap
+- socket.io (client & server)
+- joi (schema validation)
+- sqlite3
+- dayjs
 
+### Dev Dependancies
+- husky (pre-commit:lint-fix, pre-push:test)
+- prettier
+- eslint
+- jest 
+- concurrently (run client and server)
 
 ## Screenshots
 
