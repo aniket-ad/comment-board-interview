@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    'jest/globals': true
   },
   extends: ['plugin:react/recommended', 'standard', 'prettier', 'plugin:prettier/recommended'],
   parserOptions: {
@@ -11,7 +12,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react', 'lodash'],
+  plugins: ['react', 'lodash', 'jest'],
   rules: {
     'react/prop-types': 0,
     'no-use-before-define': 'off',
