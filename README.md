@@ -1,5 +1,27 @@
 # Comment board problem
 
+<p align="center">
+A comment board based on  <a href="https://facebook.github.io/react/">React</a>, <a href="https://github.com/expressjs/express">Express</a>, <a href="http://webpack.github.io/docs/">Webpack</a> and <a href="https://github.com/gaearon/react-transform-hmr">React Transform HMR</a>.
+</p>
+
+<br>
+
+<div align="center">
+
+<img height="40"  src="https://github.com/devicons/devicon/raw/master/icons/react/react-original.svg" />
+<img height="40" src="https://github.com/devicons/devicon/raw/master/icons/webpack/webpack-original.svg" />
+<img height="40" src="https://github.com/devicons/devicon/raw/master/icons/bootstrap/bootstrap-original.svg" />
+<img height="40" src="https://github.com/devicons/devicon/raw/master/icons/eslint/eslint-original.svg" />
+<img height="40" src="https://github.com/devicons/devicon/raw/master/icons/express/express-original.svg" />
+<img height="40" src="https://github.com/devicons/devicon/raw/master/icons/sqlite/sqlite-original.svg" />
+<img height="40" src="https://github.com/devicons/devicon/raw/master/icons/socketio/socketio-original.svg" />
+<img height="40" src="https://github.com/devicons/devicon/raw/master/icons/jest/jest-plain.svg" />
+<img height="40" src="https://github.com/devicons/devicon/raw/master/icons/nodejs/nodejs-original.svg" />
+</div>
+
+<hr>
+
+
 ## Installation
 
 
@@ -21,6 +43,11 @@ Run both server and client
 ```bash
 $ yarn dev
 ```
+
+## What's used
+
+### Production Dependencies
+
 
 ## Screenshots
 
