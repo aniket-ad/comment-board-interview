@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const dayjs = require('dayjs');
+
 const Joi = require('joi');
 const { createValidator } = require('express-joi-validation');
 
@@ -52,8 +53,9 @@ const validator = createValidator({
 
 const querySchema = Joi.object({
   // Same schema as front-end for consistency
-  name: Joi.string().alphanum().min(3).max(30).required(),
-  message: Joi.string().alphanum().min(3).max(300).required()
+  name: Joi.string().min(3).max(30).required(),
+  message: Joi.string().min(3).max(300).required()
+  // alpha num was tried but it was not allowing space in validation
 });
 
 // API HANDLERS
