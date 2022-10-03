@@ -51,7 +51,7 @@ const validator = createValidator({
 });
 
 const querySchema = Joi.object({
-  // same schema as front-end for consistency
+  // Same schema as front-end for consistency
   name: Joi.string().alphanum().min(3).max(30).required(),
   message: Joi.string().alphanum().min(3).max(300).required()
 });
@@ -60,9 +60,9 @@ const querySchema = Joi.object({
 // validator.body is for POST
 // validator.query is for GET
 app.post('/createComment', validator.body(querySchema), function (request, response, next) {
-  // reaching here means, validator schema was successfully validated
+  // Reaching here means, validator schema was successfully validated
   const { body } = request;
-  //do input validation + input security sanitization
+  // Do input validation + input security sanitization
   comment
     .createComment(body)
     .then(result => {

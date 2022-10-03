@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
+import { COMMENTS_POST } from '../config/env';
 
 const initialDefaultFormState = {
   name: '',
@@ -38,7 +39,7 @@ const CommentInput = () => {
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(form[key]))
       .join('&');
 
-    fetch('http://localhost:3001/createComment', {
+    fetch(COMMENTS_POST, {
       method: 'POST',
       mode: 'cors',
       headers: {

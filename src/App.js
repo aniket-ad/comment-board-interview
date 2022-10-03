@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import CommentInput from './components/commentInput';
-import CommentsList from './components/commentsList';
+import CommentInput from './components/CommentInput';
+import CommentsList from './components/CommentsList';
+import { COMMENTS_GET, SOCKET_URL } from './config/env';
 
 import './App.css';
 
 import io from 'socket.io-client';
 
-const socket = io('ws://localhost:3002');
-const URL = 'http://localhost:3001/getComments';
+const socket = io(SOCKET_URL);
 
 const App = () => {
   const [commentsData, setCommentsData] = useState([]);
 
   useEffect(() => {
-    fetch(URL, { mode: 'cors' })
+    fetch(COMMENTS_GET, { mode: 'cors' })
       .then(response => response.json())
       .then(data => setCommentsData(data));
   }, []);

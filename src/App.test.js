@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+jest.mock('socket.io-client', () => mockUrl => ({
+  on: jest.fn,
+  off: jest.fn
+}));
+
+test('render empty comments board', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText(/Comments Board/i);
   expect(linkElement).toBeInTheDocument();
 });
